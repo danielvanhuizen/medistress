@@ -3,268 +3,281 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Medi-T Stress | Mobile IV Wellness Clinic</title>
+  <title>Medi Stress | Mobile IV Wellness Clinic</title>
 
-  <meta name="description" content="Medi-T Stress is a mobile IV wellness clinic offering professional nurse-administered vitamin drips for energy, immunity, recovery and sport support in the Durban / Umhlanga area.">
+  <meta name="description" content="Medi Stress is a mobile IV wellness clinic offering nurse-administered vitamin drips for energy, immunity, hydration and recovery in the Durban / Umhlanga area.">
+  <meta name="theme-color" content="#d32f2f" />
 
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    :root {
-      --primary-red: #d32f2f;
-      --deep-red: #b71c1c;
-      --soft-red: #ffebee;
-      --soft-blue: #e3f2fd;
-      --accent-teal: #0097a7;
+    :root{
+      --red:#d32f2f;
+      --red-dark:#b71c1c;
+      --soft-red:#ffebee;
+      --soft-blue:#e3f2fd;
+      --teal:#0097a7;
+      --text:#1f2937;
     }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      color: #333;
+    body{
+      font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+      color: var(--text);
       scroll-behavior: smooth;
-      background: radial-gradient(circle at top left, var(--soft-red) 0, #ffffff 40%, var(--soft-blue) 100%);
+      background: radial-gradient(circle at top left, var(--soft-red) 0, #ffffff 42%, var(--soft-blue) 100%);
       min-height: 100vh;
     }
 
     /* NAVBAR */
-    .navbar {
-      backdrop-filter: blur(8px);
-      background-color: rgba(255,255,255,0.9) !important;
+    .navbar{
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.88) !important;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
     }
-    .navbar-brand span {
-      font-size: 1.25rem;
+    .navbar-brand{
+      font-weight: 800;
+      letter-spacing: .2px;
     }
-    .nav-link {
-      font-weight: 500;
+    .navbar-brand .dot{
+      color: var(--red);
     }
-    .nav-link:hover {
-      color: var(--primary-red) !important;
+    .nav-link{
+      font-weight: 600;
     }
+    .nav-link:hover{ color: var(--red) !important; }
 
-    header {
-      padding: 2.5rem 1rem 2rem;
+    /* HEADER */
+    header{
+      padding: 2rem 1rem 1.25rem;
       text-align: center;
     }
-    header h1 {
-      color: var(--primary-red);
-      font-size: 2.6rem;
-      margin-bottom: 0.3rem;
-      letter-spacing: 1px;
-    }
-    header p {
-      margin-bottom: 0;
-      font-size: 1rem;
-    }
-
-    .logo-main {
+    .logo-main{
       max-width: 320px;
       height: auto;
-      margin-bottom: 10px;
-      border-radius: 14px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+      margin-bottom: 14px;
+    }
+    header h1{
+      color: var(--red);
+      font-weight: 800;
+      font-size: 2.5rem;
+      margin: .4rem 0 .2rem;
+      letter-spacing: .6px;
+    }
+    header p{
+      margin: 0;
+      color: rgba(31,41,55,0.85);
+    }
+
+    /* SECTION WRAPPER */
+    .section-soft{
+      background: rgba(255,255,255,0.92);
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+      padding: 2rem 1.6rem;
+      margin-bottom: 2rem;
+    }
+    .section-title{
+      color: var(--red-dark);
+      font-weight: 800;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+    .section-title::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width: 64px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--red), var(--teal));
     }
 
     /* HERO */
-    .hero {
+    .hero{
       background: linear-gradient(135deg, var(--soft-red), #ffcdd2);
-      color: var(--deep-red);
-      padding: 3rem 1rem;
+      padding: 2.75rem 1rem;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
+    .hero::after{
+      content:"";
+      position:absolute;
+      width: 280px;
+      height: 280px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.9), transparent);
-      top: -80px;
-      right: -40px;
-      opacity: 0.7;
+      background: radial-gradient(circle, rgba(255,255,255,.95), transparent);
+      top: -100px;
+      right: -60px;
+      opacity: .75;
     }
-    .hero h2 {
-      font-size: 2.1rem;
-      margin-bottom: 1rem;
+    .hero h2{
+      color: var(--red-dark);
+      font-weight: 900;
+      font-size: 2.05rem;
+      margin-bottom: .75rem;
     }
-    .hero p {
+    .hero p{
+      max-width: 760px;
+      margin: 0 auto 1.25rem;
       font-size: 1.05rem;
-      max-width: 650px;
-      margin: 0 auto 1.5rem;
+      color: rgba(31,41,55,0.9);
     }
-    .hero .btn {
-      font-weight: 600;
+    .pill{
+      display:inline-flex;
+      gap:.5rem;
+      align-items:center;
+      padding: .42rem .8rem;
       border-radius: 999px;
-      padding: 0.6rem 1.6rem;
-    }
-    .btn-danger {
-      background-color: var(--primary-red);
-      border-color: var(--primary-red);
-    }
-    .btn-danger:hover {
-      background-color: var(--deep-red);
-      border-color: var(--deep-red);
-    }
-    .btn-outline-danger {
-      color: var(--deep-red);
-      border-color: var(--deep-red);
-    }
-    .btn-outline-danger:hover {
-      background-color: var(--deep-red);
-      color: #fff;
+      background: rgba(255,255,255,.7);
+      border: 1px solid rgba(0,0,0,.06);
+      font-weight: 700;
+      color: rgba(31,41,55,.85);
+      margin-bottom: .75rem;
     }
 
-    .section-title {
-      color: var(--deep-red);
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-      text-align: left;
-      position: relative;
+    .btn-danger{
+      background: var(--red);
+      border-color: var(--red);
+      border-radius: 999px;
+      padding: .65rem 1.4rem;
+      font-weight: 800;
     }
-    .section-title::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      width: 60px;
-      height: 3px;
-      border-radius: 8px;
-      background: linear-gradient(90deg, var(--primary-red), var(--accent-teal));
+    .btn-danger:hover{ background: var(--red-dark); border-color: var(--red-dark); }
+    .btn-outline-danger{
+      border-radius: 999px;
+      padding: .65rem 1.4rem;
+      font-weight: 800;
+      border-color: var(--red-dark);
+      color: var(--red-dark);
     }
+    .btn-outline-danger:hover{ background: var(--red-dark); color:#fff; }
 
-    .section-soft {
-      background-color: rgba(255,255,255,0.9);
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      padding: 2.2rem 1.8rem;
-      margin-bottom: 2rem;
-    }
-
-    /* CARDS */
-    .service-card {
-      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    /* TREATMENT CARDS */
+    .t-card{
+      border: 1px solid rgba(0,0,0,0.06);
       border-radius: 16px;
-      padding: 1.5rem;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.04);
       height: 100%;
-      background-color: #ffffff;
-      border-top: 4px solid var(--primary-red);
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      transition: transform .15s ease, box-shadow .15s ease;
+      background: #fff;
     }
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    .t-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.07);
     }
-    .service-card h5 {
-      color: var(--deep-red);
-      font-weight: 600;
-      margin-bottom: 0.75rem;
+    .t-price{
+      font-weight: 900;
+      color: var(--red-dark);
+      background: rgba(211,47,47,.08);
+      border: 1px solid rgba(211,47,47,.18);
+      padding: .25rem .6rem;
+      border-radius: 10px;
+      display: inline-block;
     }
-    .service-card small {
-      font-style: italic;
-      color: #666;
-    }
-    .service-card ul {
-      padding-left: 1.2rem;
-    }
-
-    .treatment-image {
-      width: 100%;
-      max-width: 620px;
-      display: block;
-      margin: 0 auto 25px;
-      border-radius: 14px;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+    .t-sub{
+      color: rgba(31,41,55,.78);
+      margin: 0;
     }
 
-    .nurse-card {
-      border-radius: 16px;
-      padding: 1.5rem;
-      background: linear-gradient(135deg, #ffffff, #f1f8ff);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
-      border-left: 4px solid var(--accent-teal);
-    }
-
-    .disclaimer {
-      font-size: 0.8rem;
-      color: #555;
+    /* DISCLAIMER */
+    .disclaimer{
+      font-size: .95rem;
+      color: rgba(31,41,55,.85);
     }
 
     /* WHATSAPP FLOAT */
-    .whatsapp-float {
+    .whatsapp-float{
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
+      right: 18px;
+      bottom: 18px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #25D366;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      z-index: 9999;
+      border: 2px solid rgba(255,255,255,0.55);
+      text-decoration: none;
     }
-    .whatsapp-float img {
-      width: 60px;
-      height: 60px;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-      transition: transform 0.15s ease;
-    }
-    .whatsapp-float img:hover {
-      transform: scale(1.05);
+    .whatsapp-float img{ width: 30px; height: 30px; }
+    .whatsapp-float:hover{ filter: brightness(0.95); }
+
+    footer{
+      text-align:center;
+      padding: 18px 12px;
+      color: rgba(31,41,55,.75);
     }
 
-    footer {
-      background: linear-gradient(90deg, var(--deep-red), #880e4f);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
+    .note-box{
+      background: rgba(0,151,167,0.08);
+      border: 1px solid rgba(0,151,167,0.18);
+      border-radius: 14px;
+      padding: 12px 14px;
+      color: rgba(31,41,55,.86);
     }
   </style>
 </head>
-<body id="top">
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top">
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#top">
-        <img src="logo.jpg" alt="Medi-T Stress logo" style="height: 40px; width: auto; border-radius: 6px; box-shadow: 0 0 6px rgba(0,0,0,0.15);">
-        <span class="ms-2 fw-bold text-danger">Medi-T Stress</span>
+      <a class="navbar-brand" href="#top">
+        Medi<span class="dot">•</span>Stress
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-2">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nurse">Meet Your Nurse</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nurse">Nurse</a></li>
           <li class="nav-item"><a class="nav-link" href="#treatments">Treatments</a></li>
-          <li class="nav-item"><a class="nav-link" href="#booking">Book</a></li>
+          <li class="nav-item"><a class="nav-link" href="#booking">Booking</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HEADER -->
-  <header>
-    <img src="logo.jpg" alt="Medi-T Stress IV wellness logo" class="logo-main">
-    <h1>Medi-T Stress</h1>
-    <p>Everything your body needs in one bag</p>
+  <!-- TOP / BRAND -->
+  <div id="top"></div>
+  <header class="container">
+    <!-- Replace logo.jpg with your updated logo file (same filename keeps it simple) -->
+    <img src="logo.jpg" class="logo-main" alt="Medi Stress Logo" onerror="this.style.display='none'">
+    <h1>Medi Stress</h1>
+    <p><i class="bi bi-droplet-half me-1"></i>Everything your body needs in one bag</p>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <h2>Mobile IV Wellness Clinic</h2>
+    <div class="container position-relative">
+      <div class="pill">
+        <i class="bi bi-truck"></i>
+        <span>Mobile IV Wellness Clinic</span>
+      </div>
+      <h2>We bring IV wellness to you</h2>
       <p>
-        Professional nurse-administered IV drips for energy, immunity and recovery —
-        in the comfort of your home, office or sports venue.
+        Professional, nurse-administered IV infusions for hydration, energy, immune support and recovery — in the comfort
+        of your home, office or sports venue.
       </p>
-      <div class="mt-3">
-        <!-- UPDATED WHATSAPP NUMBER -->
-        <a href="https://wa.me/27744694122?text=Hi%2C%20I%20would%20like%20to%20book%20an%20IV%20treatment"
-           target="_blank"
-           class="btn btn-danger me-2 mb-2">
-          <i class="bi bi-whatsapp"></i> Book via WhatsApp
+      <div class="d-flex justify-content-center flex-wrap gap-2">
+        <a class="btn btn-danger" target="_blank"
+           href="https://wa.me/27744694122?text=Hi%2C%20I%20would%20like%20to%20book%20an%20IV%20treatment">
+          <i class="bi bi-whatsapp me-1"></i> Book via WhatsApp
         </a>
-        <a href="#treatments" class="btn btn-outline-danger mb-2">
+        <a class="btn btn-outline-danger" href="#treatments">
           View Treatments
         </a>
       </div>
@@ -275,15 +288,13 @@
   <section id="about" class="container py-4">
     <div class="section-soft">
       <h2 class="section-title">About Us</h2>
-      <p>
-        Medi-T Stress is a mobile IV wellness clinic providing personalised vitamin and hydration infusions
-        in the comfort of your own space. We specialise in safe, evidence-based intravenous (IV) therapy to help
-        you recover faster, boost your energy, support your immune system and feel your best — whether you are an
-        athlete, busy professional, parent on the go or recovering from a big night out.
+      <p class="mb-2">
+        Medi Stress is a mobile IV wellness service focused on safe, convenient vitamin and hydration infusions.
+        We tailor each session to your needs after a brief health screening.
       </p>
-      <p>
-        All treatments are prepared and administered by a registered nurse, using sterile equipment and medical-grade products.
-        We come to you in the greater Durban and Umhlanga area, by appointment only.
+      <p class="mb-0">
+        All treatments are prepared and administered by a registered nurse using sterile equipment and medical-grade products.
+        We operate by appointment only.
       </p>
     </div>
   </section>
@@ -292,20 +303,19 @@
   <section id="nurse" class="container pb-4">
     <div class="section-soft">
       <h2 class="section-title">Meet Your Nurse</h2>
-      <div class="row">
+      <div class="row align-items-center g-4">
         <div class="col-lg-8">
-          <div class="nurse-card">
-            <h4 class="text-danger mb-1"><i class="bi bi-patch-plus-fill me-1"></i>Vanessa Van Huizen</h4>
-            <p class="mb-1"><strong>Registered Nurse &amp; Midwife · Owner of Medi-T Stress Mobile Clinic</strong></p>
-            <p>
-              Vanessa is a fully qualified Registered Nurse and Midwife with extensive clinical experience in hospital
-              and primary care settings. Her passion is preventative health, patient education and making wellness
-              convenient and accessible.
-            </p>
-            <p>
-              At Medi-T Stress, Vanessa personally consults with each client, reviews your health history and ensures that
-              every infusion is administered safely and comfortably. You are always treated like a patient — not just a customer.
-            </p>
+          <h4 class="text-danger fw-bold mb-1"><i class="bi bi-patch-plus-fill me-1"></i>Vanessa Van Huizen</h4>
+          <p class="mb-2"><strong>Registered Nurse &amp; Midwife · Owner of Medi Stress Mobile Clinic</strong></p>
+          <p class="mb-0">
+            Vanessa consults with each client, reviews your health history, and ensures every infusion is administered safely and comfortably.
+            You are always treated like a patient — not just a customer.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="note-box">
+            <div class="fw-bold mb-1"><i class="bi bi-shield-check me-1"></i>Safety First</div>
+            <div>We’ll confirm your booking, location, and any medical questions before your session.</div>
           </div>
         </div>
       </div>
@@ -315,259 +325,312 @@
   <!-- TREATMENTS -->
   <section id="treatments" class="container pb-5">
     <div class="section-soft">
-      <h2 class="section-title">Our IV Treatments</h2>
+      <h2 class="section-title">Our IV Treatments &amp; Prices</h2>
 
-      <img src="f43db36d-50e5-4744-a88b-01312f90f8b4.jpg"
-           alt="Medi-T Stress treatment flyer with IV options"
-           class="treatment-image"
-           onerror="this.style.display='none'">
-
-      <p class="mb-4">
-        Below is a selection of our most popular drips. All treatments can be tailored to your needs after a brief health screening.
-      </p>
-
-      <div class="row g-4 mt-2">
+      <div class="row g-3">
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <h5>Glutamine 10ml – R700</h5>
-            <p><strong>Ideal for:</strong> Gut health, athletes and active individuals.</p>
-            <ul class="mb-2">
-              <li>Supports healthy digestion and gut lining.</li>
-              <li>Helps muscle recovery after training.</li>
-              <li>May assist with fatigue related to overtraining.</li>
-            </ul>
-            <small>Approx. 30 minutes.</small>
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Glutamine &amp; Vitamin C</h5>
+              <span class="t-price">R 760</span>
+            </div>
+            <p class="t-sub">Normal Dose · 100ml</p>
+            <p class="mb-0 mt-2">Improve gut health and enhance muscle recovery.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <h5>Glutathione 10ml – R700</h5>
-            <p><strong>Ideal for:</strong> Detox, skin support and general wellness.</p>
-            <ul class="mb-2">
-              <li>Powerful antioxidant support.</li>
-              <li>Assists with tissue repair and cellular health.</li>
-              <li>May support brighter, healthier-looking skin.</li>
-            </ul>
-            <small>Approx. 30 minutes.</small>
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Glutathione &amp; Vitamin C</h5>
+              <span class="t-price">R 780</span>
+            </div>
+            <p class="t-sub">Normal Dose · 100ml</p>
+            <p class="mb-0 mt-2">Supports skin glow and recovery support.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <h5>Energy Boost Infusion – R950</h5>
-            <p><strong>Ideal for:</strong> Busy professionals, students and exhausted parents.</p>
-            <ul class="mb-2">
-              <li>Supports natural energy production.</li>
-              <li>Helps improve mood and focus.</li>
-              <li>May assist with sleep quality and stress resilience.</li>
-            </ul>
-            <small>Approx. 30–45 minutes.</small>
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Rehydration Infusion</h5>
+              <span class="t-price">R 640</span>
+            </div>
+            <p class="t-sub">1 Litre Saline + Neurobion</p>
+            <p class="mb-0 mt-2">Rehydrates and restores essentials.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <h5>Immune Boost Infusion – R800</h5>
-            <p><strong>Ideal for:</strong> Cold/flu season, frequent travellers and educators.</p>
-            <ul class="mb-2">
-              <li>High-dose vitamin C and immune-supportive nutrients.</li>
-              <li>Supports your body’s natural defence systems.</li>
-              <li>Perfect before or after exposure to bugs.</li>
-            </ul>
-            <small>Approx. 30–45 minutes.</small>
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Migraine Relief</h5>
+              <span class="t-price">R 680</span>
+            </div>
+            <p class="t-sub">Trameel + Cerebrum + Xefo · 50ml Saline</p>
+            <p class="mb-0 mt-2">Relieves severe headaches.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <h5>Vitamin C 500mg Infusion – R450</h5>
-            <p><strong>Ideal for:</strong> A quick immune top-up.</p>
-            <ul class="mb-2">
-              <li>Boosts vitamin C levels quickly.</li>
-              <li>Supports recovery from mild illness or stress.</li>
-              <li>Great add-on before travel or events.</li>
-            </ul>
-            <small>Approx. 30 minutes.</small>
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Myers Cocktail</h5>
+              <span class="t-price">R 500</span>
+            </div>
+            <p class="t-sub">Vitamin B, D &amp; C + Minerals · 100ml Saline + Taurine</p>
+            <p class="mb-0 mt-2">Boosts energy levels, mood, sleep and helps reduce stress.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <h5>Vitamin B12 / Bco Infusion – R400</h5>
-            <p><strong>Ideal for:</strong> Low energy, low mood and poor concentration.</p>
-            <ul class="mb-2">
-              <li>“Pocket rocket” boost for energy and focus.</li>
-              <li>Supports nervous system and brain function.</li>
-              <li>Often combined with other drips for extra impact.</li>
-            </ul>
-            <small>Approx. 20–30 minutes.</small>
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Jet Fuel / Energy Boost</h5>
+              <span class="t-price">R 1 000</span>
+            </div>
+            <p class="t-sub">Neurobion + Vitamin C + Zinc + Selenium + 1 Litre Saline + more</p>
+            <p class="mb-0 mt-2">Increases energy and reduces fatigue; supports full-body recovery.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <h5>Babelaas / Hangover Infusion – R900</h5>
-            <p><strong>Ideal for:</strong> Post-event recovery and dehydration.</p>
-            <ul class="mb-2">
-              <li>Rehydrates quickly after big nights out.</li>
-              <li>Supports liver detox and recovery.</li>
-              <li>Helps ease headache, nausea and fatigue.</li>
-            </ul>
-            <small>Approx. 45 minutes.</small>
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Immune Boost Infusion</h5>
+              <span class="t-price">R 1 000</span>
+            </div>
+            <p class="t-sub">Neurobion + High dosage Vitamin C + 1 Litre Saline</p>
+            <p class="mb-0 mt-2">Boosts your immune system with a high dose of Vitamin C.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <h5>Anti-inflammatory / Sport Recovery – R1 000</h5>
-            <p><strong>Ideal for:</strong> Athletes and anyone with aches and pains.</p>
-            <ul class="mb-2">
-              <li>Helps reduce inflammation and joint discomfort.</li>
-              <li>Supports circulation and post-game recovery.</li>
-              <li>Great after tournaments, races or heavy training blocks.</li>
-            </ul>
-            <small>Approx. 45–60 minutes.</small>
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Vitamin C Infusion</h5>
+              <span class="t-price">R 450</span>
+            </div>
+            <p class="t-sub">500mg Vitamin C · 100ml Saline</p>
+            <p class="mb-0 mt-2">When you just need that added immune boost.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Vitamin B12 Infusion</h5>
+              <span class="t-price">R 500</span>
+            </div>
+            <p class="t-sub">Vitamin B12 · 100ml Saline</p>
+            <p class="mb-0 mt-2">A little pocket rocket to boost your energy and mood.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Babelaas / Hangover Infusion</h5>
+              <span class="t-price">R 1 000</span>
+            </div>
+            <p class="t-sub">Tiamine + Vitamin C + Glutathione + Dex + Neurobion · 1 Litre Saline</p>
+            <p class="mb-0 mt-2">Drip away babelaas / hangover blues the healthy way — fast.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">Anti-inflammatory / Sport Recovery Infusion</h5>
+              <span class="t-price">R 1 200</span>
+            </div>
+            <p class="t-sub">1 Litre Saline + Xefo + Neurobion + Trameel + Vitamin C</p>
+            <p class="mb-0 mt-2">Reduces inflammation and joint pain, improves circulation — especially after a game.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="t-card p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h5 class="fw-bold mb-1">NAD Infusion</h5>
+              <span class="t-price">Price on booking</span>
+            </div>
+            <p class="t-sub">Nicotinamide adenine dinucleotide (NAD) + Vitamin C · 3 drips in 3 weeks (±2 hours)</p>
+            <p class="mb-0 mt-2">Weight loss support; may assist with depression/anxiety, brain fog, fatigue and sleep quality.</p>
           </div>
         </div>
       </div>
+
+      <div class="note-box mt-4">
+        <div class="fw-bold mb-1"><i class="bi bi-info-circle me-1"></i>Important</div>
+        <div>Pre-bookings are essential. NAD pricing will be discussed upon booking.</div>
+      </div>
+
+      <p class="disclaimer mt-3 mb-0">
+        Results may vary between individuals. Please consult your doctor if you have a chronic condition,
+        are pregnant/breastfeeding, or taking chronic medication. In emergencies (e.g., chest pain, difficulty breathing,
+        severe symptoms), seek immediate medical attention.
+      </p>
     </div>
   </section>
 
   <!-- BOOKING -->
   <section id="booking" class="container pb-5">
     <div class="section-soft">
-      <h2 class="section-title">Book an Appointment</h2>
-      <p class="mb-3">
-        Complete the form below and we’ll contact you to confirm your booking, location and any medical questions before your session.
-      </p>
-      <!-- BOOKING FORM WITH IDs FOR JS -->
-      <form class="row g-3" id="bookingForm">
+      <h2 class="section-title">Booking</h2>
+      <p class="mb-4">Fill in the form and it will open WhatsApp with your booking details ready to send.</p>
+
+      <form id="bookingForm" class="row g-3">
         <div class="col-md-6">
-          <label class="form-label">Full Name</label>
-          <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+          <label for="fullName" class="form-label fw-semibold">Full Name</label>
+          <input type="text" class="form-control" id="fullName" required>
         </div>
+
         <div class="col-md-6">
-          <label class="form-label">Email Address</label>
-          <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+          <label for="phone" class="form-label fw-semibold">Contact Number</label>
+          <input type="tel" class="form-control" id="phone" required>
         </div>
+
         <div class="col-md-6">
-          <label class="form-label">Phone Number</label>
-          <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+          <label for="email" class="form-label fw-semibold">Email (optional)</label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com">
         </div>
+
         <div class="col-md-6">
-          <label class="form-label">Preferred Treatment</label>
+          <label for="treatment" class="form-label fw-semibold">Treatment</label>
           <select class="form-select" id="treatment" required>
-            <option selected disabled>Select Treatment</option>
-            <option>Glutamine 10ml – R700</option>
-            <option>Glutathione 10ml – R700</option>
-            <option>Energy Boost Infusion – R950</option>
-            <option>Immune Boost Infusion – R800</option>
-            <option>Vitamin C 500mg Infusion – R450</option>
-            <option>Vitamin B12 / Bco Infusion – R400</option>
-            <option>Babelaas / Hangover Infusion – R900</option>
-            <option>Anti-inflammatory / Sport Recovery – R1 000</option>
+            <option value="" selected disabled>Select a treatment</option>
+            <option>Glutamine & Vitamin C (100ml) - R760</option>
+            <option>Glutathione & Vitamin C (100ml) - R780</option>
+            <option>Rehydration Infusion (1L Saline + Neurobion) - R640</option>
+            <option>Migraine Relief (Trameel + Cerebrum + Xefo) - R680</option>
+            <option>Myers Cocktail - R500</option>
+            <option>Jet Fuel / Energy Boost Infusion - R1000</option>
+            <option>Immune Boost Infusion - R1000</option>
+            <option>Vitamin C 500mg Infusion - R450</option>
+            <option>Vitamin B12 Infusion - R500</option>
+            <option>Babelaas / Hangover Infusion - R1000</option>
+            <option>Anti-inflammatory / Sport Recovery Infusion - R1200</option>
+            <option>NAD Infusion (Price discussed on booking)</option>
           </select>
         </div>
-        <div class="col-md-4">
-          <label class="form-label">Preferred Date</label>
+
+        <div class="col-md-6">
+          <label for="date" class="form-label fw-semibold">Preferred Date</label>
           <input type="date" class="form-control" id="date" required>
         </div>
-        <div class="col-md-4">
-          <label class="form-label">Preferred Time</label>
+
+        <div class="col-md-6">
+          <label for="time" class="form-label fw-semibold">Preferred Time (optional)</label>
           <input type="time" class="form-control" id="time">
         </div>
-        <div class="col-md-4">
-          <label class="form-label">Location Type</label>
+
+        <div class="col-12">
+          <label for="locationType" class="form-label fw-semibold">Location</label>
           <select class="form-select" id="locationType" required>
-            <option selected disabled>Select Location</option>
             <option>Home</option>
             <option>Office</option>
-            <option>Sports event</option>
+            <option>Hotel / Guesthouse</option>
+            <option>Sports Venue</option>
             <option>Other</option>
           </select>
         </div>
+
         <div class="col-12">
-          <label class="form-label">Additional Notes (optional)</label>
-          <textarea class="form-control" id="notes" placeholder="Medical conditions, medications, or special requests" rows="3"></textarea>
+          <label for="notes" class="form-label fw-semibold">Notes (address / symptoms / anything we should know)</label>
+          <textarea class="form-control" id="notes" rows="3" placeholder="Example: Address, parking details, any allergies, etc."></textarea>
         </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="disclaimerCheck" required>
-            <label class="form-check-label" for="disclaimerCheck">
-              I understand that IV therapy does not replace medical treatment and confirm that I have no known allergies to the ingredients discussed with the nurse.
-            </label>
-          </div>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-danger w-100">Submit Booking Request</button>
+
+        <div class="col-12 d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-danger">
+            <i class="bi bi-whatsapp me-1"></i> Send Booking on WhatsApp
+          </button>
+          <a class="btn btn-outline-danger" target="_blank"
+             href="https://wa.me/27744694122?text=Hi%2C%20I%20would%20like%20to%20book%20an%20IV%20treatment">
+            Quick WhatsApp Message
+          </a>
         </div>
       </form>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="container pb-4">
+  <section id="contact" class="container pb-5">
     <div class="section-soft">
-      <h2 class="section-title">Contact &amp; Service Area</h2>
-      <p><strong><i class="bi bi-telephone-fill me-1"></i>Phone:</strong> 084 504 3356</p>
-      <p><strong><i class="bi bi-whatsapp me-1"></i>WhatsApp (Bookings):</strong> 074 469 4122</p>
-      <p><strong><i class="bi bi-envelope-fill me-1"></i>Email:</strong> vanhuizenvanessa@gmail.com</p>
-      <p><strong><i class="bi bi-geo-alt-fill me-1"></i>Service Area:</strong> Greater Durban &amp; Umhlanga region (surrounding areas by arrangement).</p>
-      <p><strong><i class="bi bi-clock-fill me-1"></i>Hours:</strong> Monday–Saturday, 08:00–18:00 · After-hours and group bookings by prior arrangement.</p>
+      <h2 class="section-title">Contact</h2>
+
+      <div class="row g-3">
+        <div class="col-lg-7">
+          <div class="note-box h-100">
+            <div class="fw-bold mb-2"><i class="bi bi-telephone me-1"></i>Bookings & Enquiries</div>
+            <div class="mb-1"><strong>Vanessa Van Huizen</strong></div>
+            <div class="mb-1">Cell: <a href="tel:+27744694122">074 469 4122</a></div>
+            <div class="mb-0">Email: <a href="mailto:vanhuizenvanessa@gmail.com">vanhuizenvanessa@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="note-box h-100">
+            <div class="fw-bold mb-2"><i class="bi bi-geo-alt me-1"></i>Service Area</div>
+            <div class="mb-2">Greater Durban & Umhlanga (mobile service by appointment)</div>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-danger btn-sm" target="_blank"
+                 href="https://wa.me/27744694122?text=Hi%2C%20I%20want%20to%20book%20a%20Medi%20Stress%20treatment.%20My%20area%20is%3A%20">
+                <i class="bi bi-whatsapp me-1"></i> WhatsApp Us
+              </a>
+              <a class="btn btn-outline-danger btn-sm" href="#booking">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- DISCLAIMER -->
-  <section class="bg-light py-4">
-    <div class="container disclaimer">
-      <p><strong>Medical Disclaimer:</strong> IV vitamin therapy is not a substitute for medical care or emergency treatment. Results may vary between individuals. Please consult your doctor if you have a chronic condition, are pregnant, breastfeeding, or taking chronic medication. Always seek immediate medical attention in case of emergency symptoms such as chest pain, difficulty breathing or sudden severe pain.</p>
-    </div>
-  </section>
-
-  <!-- WHATSAPP FLOAT (UPDATED NUMBER) -->
+  <!-- WHATSAPP FLOAT (same number) -->
   <a href="https://wa.me/27744694122?text=Hi%2C%20I%20would%20like%20to%20book%20an%20IV%20treatment"
      class="whatsapp-float"
      target="_blank"
      aria-label="Chat on WhatsApp to book a treatment">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp chat button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Medi-T Stress — All Rights Reserved.</p>
+    <p class="mb-0">&copy; 2025 Medi Stress — All Rights Reserved.</p>
   </footer>
 
-  <!-- SCRIPT: SEND FORM TO WHATSAPP -->
+  <!-- SCRIPT: SEND FORM TO WHATSAPP (same number) -->
   <script>
     const form = document.getElementById('bookingForm');
 
     form.addEventListener('submit', function (e) {
-      e.preventDefault(); // stop normal HTML submit
+      e.preventDefault();
 
-      const name = document.getElementById('fullName').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
       const treatment = document.getElementById('treatment').value;
       const date = document.getElementById('date').value;
       const time = document.getElementById('time').value;
       const locationType = document.getElementById('locationType').value;
-      const notes = document.getElementById('notes').value;
+      const notes = document.getElementById('notes').value.trim();
 
       let message =
         'Hi, I would like to book an IV treatment.%0A%0A' +
-        'Name: ' + name + '%0A' +
-        'Email: ' + email + '%0A' +
-        'Phone: ' + phone + '%0A' +
-        'Treatment: ' + treatment + '%0A' +
-        'Preferred date: ' + date + '%0A' +
-        'Preferred time: ' + (time || 'Any time') + '%0A' +
-        'Location type: ' + locationType + '%0A' +
-        'Notes: ' + (notes || 'None');
+        'Name: ' + encodeURIComponent(name) + '%0A' +
+        'Phone: ' + encodeURIComponent(phone) + '%0A' +
+        (email ? ('Email: ' + encodeURIComponent(email) + '%0A') : '') +
+        'Treatment: ' + encodeURIComponent(treatment) + '%0A' +
+        'Preferred date: ' + encodeURIComponent(date) + '%0A' +
+        'Preferred time: ' + encodeURIComponent(time || 'Any time') + '%0A' +
+        'Location type: ' + encodeURIComponent(locationType) + '%0A' +
+        'Notes: ' + encodeURIComponent(notes || 'None');
 
       const url = 'https://wa.me/27744694122?text=' + message;
-
-      window.open(url, '_blank'); // open WhatsApp chat in new tab/window
+      window.open(url, '_blank');
     });
   </script>
 
